@@ -5,10 +5,10 @@ AUTH_INSTALLED_APPS = [
 ]
 
 #
-REST_FRAMEWORK = {
+AUTH_REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
     ]
 }
 
@@ -42,13 +42,13 @@ REST_AUTH_SERIALIZERS = {
     'PASSWORD_RESET_SERIALIZER': 'authentication.api.serializers.CustomPasswordResetSerializer'
 }
 
-ACCOUNT_AUTHENTICATION_METHOD = 'email'
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 LOGIN_ON_EMAIL_CONFIRMATION = False
 
 # Implement this urls in vue
-LOGIN_URL = '/auth/api/login'
+LOGIN_URL = '/auth/login/'
 LOGIN_REDIRECT_URL = '/accounts/profile/'
 
 # Implement this NEW_PASSWORD_URL in vue.
