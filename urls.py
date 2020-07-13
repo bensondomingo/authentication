@@ -7,4 +7,4 @@ urlpatterns = [
 ]
 
 if not settings.AUTHENTICATION_API_ONLY:
-    urlpatterns += [path('accounts/', include('allauth.account.urls')),]
+    urlpatterns += [path('accounts/', include('allauth.account.urls')), ]

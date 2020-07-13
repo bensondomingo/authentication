@@ -49,7 +49,8 @@ LOGIN_ON_EMAIL_CONFIRMATION = False
 
 # Implement this urls in vue
 LOGIN_URL = '/auth/login/'
-LOGIN_REDIRECT_URL = '/accounts/profile/'
+# Redirect to Dashboard
+LOGIN_REDIRECT_URL = ''
 
 # Implement this NEW_PASSWORD_URL in vue.
 # Should accept uid and token as props
